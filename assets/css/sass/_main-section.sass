@@ -1,0 +1,195 @@
+#main
+	float: left
+	height: 100vh
+	padding: 0px
+	display: flex
+	align-items: center
+
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-image: linear-gradient(to bottom right, #1b2e3c, #1b2b39)
+		opacity: .6
+
+	.subscribe
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+		.animated
+			animation-duration: 0.8s
+
+		.subscribe-open
+			@extend .border-color-red
+			@extend .color-red
+			border: 1px solid
+			border-top: none
+			padding: 0 10px
+			margin-left: calc( 50% - 62px )
+			width: 100px
+			background-color: #1b2e3c
+			color: #fff
+			text-align: center
+			cursor: pointer
+			height: 90px
+			transition: all 0.5s ease-in-out
+
+			&:hover
+				@extend .background-color-red
+				@extend .color-white
+
+			.ion-ios-email-outline
+				font-size: 40px
+
+			p
+				margin-top: -15px
+
+		.subscribe-close
+			@extend .background-color-red
+			@extend .color-white
+			margin-left: 0px
+			transition: all 0.5s ease-in-out
+			width: 60px
+			height: 46px
+			float: left
+
+			&:hover
+				@extend .background-color-white
+				@extend .color-red
+				transition: 0.8s
+				background-color: $color-white
+
+				.ion-ios-close-empty
+					@extend .color-red
+					font-size: 27px
+
+			.ion-ios-close-empty
+				@extend .color-white
+				font-size: 27px
+
+		.subscribe-form
+			display: none
+			float: left
+			width: calc(100% - 60px )
+			height: 46px
+
+			.subscribe-field
+				@extend .background-color-transparent
+				@extend .border-color-red
+				border: none 
+				width: calc(100% - 150px)
+				border-bottom: 1px solid
+				padding: 10px
+				float: left
+				height: 46px
+
+			.subscribe-submit
+				@extend .border-color-red
+				@extend .color-red
+				border: none
+				padding: 10px
+				width: 150px
+				background: transparent
+				margin: 0
+				float: left
+				height: 46px
+				cursor: pointer
+				border-bottom: 1px solid
+				border-left: 1px solid
+
+				&:hover
+					@extend .background-color-red
+					@extend .color-white
+					@extend .border-color-red
+					transition: 0.5s
+
+	.main-wrapper
+		position: relative
+		width: 100%	
+
+		.logo-wrapper
+			margin: 20px auto 0 auto
+			width: 100%
+			text-align: center
+			-webkit-transform: translate3d(0,0,0)
+			-moz-transform: translate3d(0,0,0)
+			-ms-transform: translate3d(0,0,0)
+			-o-transform: translate3d(0,0,0)
+
+			.logo-wrapper-animation
+				@extend .color-red
+				outline: none
+				text-decoration: none
+				position: relative
+				line-height: 1
+				display: inline-block
+				font-size: 100px
+				// padding: 0 10px 21px
+				// left: 42%
+				text-align: center
+				margin: 0 auto
+				marging: 0 auto
+				-webkit-transition: color 0.5s
+				-moz-transition: color 0.5s
+				-ms-transition: color 0.5s
+				-o-transition: color 0.5s
+				transition: color 0.5s
+				
+
+				span
+					@extend .color-red
+					font-size: 20%
+					font-weight: 400
+					position: absolute
+					right: 15px
+					bottom: 0
+					opacity: 0
+					-webkit-transform: translate3d(-10px,-10px,0)
+					transform: translate3d(-10px,-10px,0)
+					-webkit-transition: -webkit-transform 0.5s, opacity 0.5s
+					transition: transform 0.5s, opacity 0.5s
+
+	.main-text
+
+		.title
+			@extend .color-dark-gray
+			width: 80%
+			text-align: center
+			margin: 0 auto
+
+		.paragraph
+			@extend .color-dark-gray
+			width: 80%
+			text-align: center
+			margin: 0 auto
+			margin-top: 50px
+	
+	#counter
+		position: absolute
+		width: 100%
+		bottom: 0
+
+		.counter-wrapper
+			margin: 0 auto
+			width: fit-content
+			width: -moz-fit-content
+			height: 112px
+			padding-left: 12px
+
+			.countdown-wrap
+				@extend .color-red
+				float: left
+				text-align: center
+				border-top: 2px solid
+				padding: 10px
+				margin-right: 12px
+				width: 100px
+
+				.countdown
+					@extend .color-dark-gray
+					display: block

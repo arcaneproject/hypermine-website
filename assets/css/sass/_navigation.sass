@@ -1,0 +1,149 @@
+.navigation
+	position: fixed
+	right: 5px
+	top: 0
+	width: 100vh
+	transform: rotate(90deg) translateX(100%)
+	-webkit-transform: rotate(90deg) translateX(100%)
+	-moz-transform: rotate(90deg) translateX(100%)
+	-ms-transform: rotate(90deg) translateX(100%)
+	-o-transform: rotate(90deg) translateX(100%)
+	transform-origin: right top
+	z-index: 1
+
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-image: linear-gradient(to bottom right, #1b2e3c, #1b2b39)
+		opacity: .6
+
+	ul
+		padding: 0px
+		margin: 0px
+		list-style: none
+		display: inline-block
+		float: left
+		height: 90px
+
+		li
+			width: calc( 14vh - 20px )
+			text-transform: uppercase
+			text-align: center
+			outline: none
+			float: left
+			display: table
+			transform: translate3d(0,0,0)
+			-webkit-transform: translate3d(0,0,0)
+			-moz-transform: translate3d(0,0,0)
+			-ms-transform: translate3d(0,0,0)
+			-o-transform: translate3d(0,0,0)
+			padding: 19px 8px 8px 8px
+
+
+			.title-animation
+				@extend .color-red
+				outline: none
+				font-size: 14px!important
+				font-weight: 600
+				font-family: 'Titillium Web', sans-serif
+				color: #fff
+				line-height: 22px
+				z-index: 1
+				text-decoration: none
+				display: table-cell
+				vertical-align: middle
+				transition: color 0.5s
+				-webkit-transition: color 0.5s
+				-moz-transition: color 0.5s
+				-ms-transition: color 0.5s
+				-o-transition: color 0.5s
+				transition: color 0.5s
+				&:hover
+					color: rgb(6, 100, 128)
+
+					&:before
+						transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-moz-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-ms-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-o-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+
+				
+
+
+		.g-map-marker
+			@extend .border-color-red
+			width: 68px
+			height: 100%
+			border-top: 1px solid
+			display: table
+			padding: 0
+			transform: rotate(-90deg)
+
+			.title-animation
+				background-color: transparent
+				float: none
+				top: 10px
+				left: -10px
+				span
+					font-size: 37px
+
+				&:hover
+					@extend .color-dark-gray
+
+					&:before
+						transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-moz-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-ms-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						-o-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+						transform: rotate3d(0,0,1,45deg) scale3d(1,1,1)
+
+				
+.navigation-mobile
+	display: none
+	position: fixed
+	top: 50px
+	right: 0
+	
+	.icon-bar
+		@extend .background-color-red
+
+	.navbar-toggler
+		@extend .border-color-red
+		border: 1px solid
+		z-index: 2
+		padding: 6px 10px
+		margin: 2px
+		margin-top: 7px
+
+	.navbar-toggler[aria-expanded="true"]
+		border: none
+
+
+	.navbar-collapse 
+		width: 100%
+		@extend .background-color-white
+
+		ul
+
+			li
+				@extend .border-color-red
+				@extend .color-red
+				border: 1px solid
+				border-bottom: 0
+				text-align: center
+				width: 100%
+				text-transform: uppercase
+
+				&:last-child
+					@extend .border-color-red
+					border-bottom: 1px solid
+		
+.custom_toggler
+	z-index: 9999!important
