@@ -652,7 +652,7 @@ html {
       margin-bottom: 90px; }
       #main .main-wrapper .logo-wrapper {
         position: relative;
-        margin-top: 10px; }
+        margin-top: 10px!important; }
         #main .main-wrapper .logo-wrapper .logo-wrapper-animation {
           font-size: 70px;
           left: 0px; }
@@ -700,7 +700,10 @@ html {
     position: absolute!important;
     
   }
-
+#content section {
+      padding-left: 0px;
+      height: auto!important; 
+    }
   #content {
     overflow-x: hidden; }
 
